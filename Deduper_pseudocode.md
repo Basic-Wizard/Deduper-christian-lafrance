@@ -82,3 +82,23 @@ def get_strand(sam_line: str) -> bool:
 ```
 Test input: NS500451:154:HWKTMBGXX:1:11101:24260:1121:CTGTTCAC	63	2	100	36	1S3M2D4N1S  
 Expected output: False  
+
+____________________________________________________________________________________________________________________________
+
+Peer Review:
+Keenan Raleigh
+
+Unix:
+If you grep out the @ headers you will need still need to write them to the dedupered SAM file somehow after the rest.
+
+Python:
+how are you checking for valid UMI? genuinely curious here, Ithink Imissed something in lecture. Are we given a list of valid UMI's?
+
+Probably not the best to store every record in a dictionary, I also plan on clearing my dictionary by chromosome.
+
+Functions:
+get_pos
+I dont think you need to change the way that you calculate start with CIGAR string with +/- strand, but I could definitelyt be wrong, I think it will depend on if the program reads left to right or 5' to 3'.
+
+Overall:
+Looks good, Should be fun.
